@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthMate AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='images/futuro.jpg') }}" alt="HealthMate AI Logo" class="logo">
+            <h1>HealthMate AI</h1>
+            <p>Your AI-powered health assistant</p>
+        </header>
+
+        <main>
+            <div id="symptom-section">
+                <h2>What's wrong?</h2>
+                <p>Describe your symptoms in plain English. For example: "I have a headache and fatigue."</p>
+                <textarea id="symptom-input" rows="4" placeholder="Enter your symptoms here..."></textarea>
+                <button id="analyze-btn">Analyze Symptoms</button>
+            </div>
+
+            <div id="loading-spinner" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyzing your symptoms...</p>
+            </div>
+
+            <div id="questions-section" class="hidden">
+                <h2>Answer these questions</h2>
+                <p>This will help us narrow down the possibilities.</p>
+                <div id="questions-list"></div>
+                <input type="email" id="email-input" placeholder="Enter your email to receive the summary" />
+                <button id="summary-btn">Get Summary</button>
+            </div>
+
+            <div id="summary-section" class="hidden">
+                <h2>Your Health Summary</h2>
+                <div id="summary-output"></div>
+                <p class="disclaimer">
+                    <strong>Disclaimer:</strong> This is not a medical diagnosis. This tool is for informational purposes only. Please consult with a healthcare professional for any health concerns.
+                </p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 HealthMate AI. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
