@@ -41,7 +41,7 @@ Follow these steps to get the application running locally.
 First, clone the repository to your local machine (or simply use the files you already have).
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/wh1max/HealthMate.git
 cd HealthMate
 ```
 
